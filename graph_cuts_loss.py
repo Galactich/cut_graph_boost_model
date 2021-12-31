@@ -29,3 +29,11 @@ class GC_2D_Original(torch.nn.Module):
         # vertical: x <-> x1, x3 <-> x1
         target_vert = torch.abs(target[:, :, 1:, :] - target[:, :, :-1, :])  # delta(yu, yv)
         input_vert = input[:, :, 1:, :] - input[:, :, :-1, :]  # pu - pv
+
+        # horizontal: x <-> x2, x4 <-> x
+        target_hori = torch.abs(target[:, :, :, 1:] - target[:, :, :, :-1])  # delta(yu, yv)
+        input_hori = input[:, :, :, 1:] - input[:, :, :, :-1]  # pu - pv
+
+        # diagonal1: x <-> x5, x8 <-> x
+        target_diag1 = torch.abs(target[:, :, 1:, 1:] - target[:, :, :-1, :-1])  # delta(yu, yv)
+        input_diag1 = input[:, :, 1:, 1:] - input[:, :, :-1, :-1]  # pu - pv
