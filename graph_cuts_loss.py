@@ -37,3 +37,12 @@ class GC_2D_Original(torch.nn.Module):
         # diagonal1: x <-> x5, x8 <-> x
         target_diag1 = torch.abs(target[:, :, 1:, 1:] - target[:, :, :-1, :-1])  # delta(yu, yv)
         input_diag1 = input[:, :, 1:, 1:] - input[:, :, :-1, :-1]  # pu - pv
+
+        # diagonal2: x <-> x7, x6 <-> x
+        target_diag2 = torch.abs(target[:, :, 1:, :-1] - target[:, :, :-1, 1:])  # delta(yu, yv)
+        input_diag2 = input[:, :, 1:, :-1] - input[:, :, :-1, 1:]  # pu - pv
+
+        dist1 = 1.0  # dist(u, v), e.g. x <-> x1
+        dist2 = 2.0 ** 0.5  # dist(u, v) , e.g. x <-> x6
+
+        p1 = torch.exp(-(input_vert ** 2) / (2 * self.sigma * self.sigma)) / dist1 * target_vert
