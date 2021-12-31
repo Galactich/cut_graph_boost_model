@@ -28,3 +28,4 @@ class GC_2D_Original(torch.nn.Module):
         '''
         # vertical: x <-> x1, x3 <-> x1
         target_vert = torch.abs(target[:, :, 1:, :] - target[:, :, :-1, :])  # delta(yu, yv)
+        input_vert = input[:, :, 1:, :] - input[:, :, :-1, :]  # pu - pv
