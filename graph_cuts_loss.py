@@ -46,3 +46,9 @@ class GC_2D_Original(torch.nn.Module):
         dist2 = 2.0 ** 0.5  # dist(u, v) , e.g. x <-> x6
 
         p1 = torch.exp(-(input_vert ** 2) / (2 * self.sigma * self.sigma)) / dist1 * target_vert
+        p2 = torch.exp(-(input_hori ** 2) / (2 * self.sigma * self.sigma)) / dist1 * target_hori
+
+        p3 = torch.exp(-(input_diag1 ** 2) / (2 * self.sigma * self.sigma)) / dist2 * target_diag1
+        p4 = torch.exp(-(input_diag2 ** 2) / (2 * self.sigma * self.sigma)) / dist2 * target_diag2
+
+        boundary_term = (torch.sum(p1) / torch.sum(target_vert) +
