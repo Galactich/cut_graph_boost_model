@@ -52,3 +52,4 @@ class GC_2D_Original(torch.nn.Module):
         p4 = torch.exp(-(input_diag2 ** 2) / (2 * self.sigma * self.sigma)) / dist2 * target_diag2
 
         boundary_term = (torch.sum(p1) / torch.sum(target_vert) +
+                         torch.sum(p2) / torch.sum(target_hori) +
