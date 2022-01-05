@@ -55,3 +55,6 @@ class GC_2D_Original(torch.nn.Module):
                          torch.sum(p2) / torch.sum(target_hori) +
                          torch.sum(p3) / torch.sum(target_diag1) +
                          torch.sum(p4) / torch.sum(target_diag2)) / 4  # equation (5)
+
+        return self.lmda * region_term + boundary_term
+
