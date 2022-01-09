@@ -61,3 +61,7 @@ class GC_2D_Original(torch.nn.Module):
 
 # 2D GC loss with boundary approximation in equation (7) to eliminate sigma
 class GC_2D(torch.nn.Module):
+
+    def __init__(self, lmda):
+        super(GC_2D, self).__init__()
+        self.lmda = lmda
