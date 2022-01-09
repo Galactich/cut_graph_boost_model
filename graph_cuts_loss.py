@@ -68,3 +68,6 @@ class GC_2D(torch.nn.Module):
 
     def forward(self, input, target):
         # input: B * C * H * W, after sigmoid operation
+        # target: B * C * H * W
+
+        # region term equals to BCE
