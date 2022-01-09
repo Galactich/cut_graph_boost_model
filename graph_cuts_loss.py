@@ -65,3 +65,6 @@ class GC_2D(torch.nn.Module):
     def __init__(self, lmda):
         super(GC_2D, self).__init__()
         self.lmda = lmda
+
+    def forward(self, input, target):
+        # input: B * C * H * W, after sigmoid operation
