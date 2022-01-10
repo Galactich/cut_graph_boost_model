@@ -71,3 +71,5 @@ class GC_2D(torch.nn.Module):
         # target: B * C * H * W
 
         # region term equals to BCE
+        bce = torch.nn.BCELoss()
+        region_term = bce(input=input, target=target)
