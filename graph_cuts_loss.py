@@ -77,3 +77,9 @@ class GC_2D(torch.nn.Module):
         # boundary_term
         '''
         x5 x1 x6
+        x2 x  x4
+        x7 x3 x8
+        '''
+        # vertical: x <-> x1, x3 <-> x1
+        target_vert = torch.abs(target[:, :, 1:, :] - target[:, :, :-1, :])  # delta(yu, yv)
+        input_vert = torch.abs(input[:, :, 1:, :] - input[:, :, :-1, :])  # |pu - pv|
