@@ -73,3 +73,7 @@ class GC_2D(torch.nn.Module):
         # region term equals to BCE
         bce = torch.nn.BCELoss()
         region_term = bce(input=input, target=target)
+
+        # boundary_term
+        '''
+        x5 x1 x6
