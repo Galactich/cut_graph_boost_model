@@ -83,3 +83,6 @@ class GC_2D(torch.nn.Module):
         # vertical: x <-> x1, x3 <-> x1
         target_vert = torch.abs(target[:, :, 1:, :] - target[:, :, :-1, :])  # delta(yu, yv)
         input_vert = torch.abs(input[:, :, 1:, :] - input[:, :, :-1, :])  # |pu - pv|
+
+        # horizontal: x <-> x2, x4 <-> x
+        target_hori = torch.abs(target[:, :, :, 1:] - target[:, :, :, :-1])  # delta(yu, yv)
