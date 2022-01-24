@@ -91,3 +91,7 @@ class GC_2D(torch.nn.Module):
         # diagonal1: x <-> x5, x8 <-> x
         target_diag1 = torch.abs(target[:, :, 1:, 1:] - target[:, :, :-1, :-1])  # delta(yu, yv)
         input_diag1 = torch.abs(input[:, :, 1:, 1:] - input[:, :, :-1, :-1])  # |pu - pv|
+
+        # diagonal2: x <-> x7, x6 <-> x
+        target_diag2 = torch.abs(target[:, :, 1:, :-1] - target[:, :, :-1, 1:])  # delta(yu, yv)
+        input_diag2 = torch.abs(input[:, :, 1:, :-1] - input[:, :, :-1, 1:])  # |pu - pv|
