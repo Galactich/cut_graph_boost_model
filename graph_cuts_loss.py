@@ -100,3 +100,8 @@ class GC_2D(torch.nn.Module):
         p2 = input_hori * target_hori
         p3 = input_diag1 * target_diag1
         p4 = input_diag2 * target_diag2
+
+        boundary_term = 1 - (torch.sum(p1) / torch.sum(target_vert) +
+                             torch.sum(p2) / torch.sum(target_hori) +
+                             torch.sum(p3) / torch.sum(target_diag1) +
+                             torch.sum(p4) / torch.sum(target_diag2)) / 4  # equation (7), and normalized to (0,1)
