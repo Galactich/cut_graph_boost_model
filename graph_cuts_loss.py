@@ -105,3 +105,9 @@ class GC_2D(torch.nn.Module):
                              torch.sum(p2) / torch.sum(target_hori) +
                              torch.sum(p3) / torch.sum(target_diag1) +
                              torch.sum(p4) / torch.sum(target_diag2)) / 4  # equation (7), and normalized to (0,1)
+
+        return self.lmda * region_term + boundary_term
+
+
+# 3D GC loss with boundary approximation in equation (7) to eliminate sigma
+class GC_3D_v1(torch.nn.Module):
