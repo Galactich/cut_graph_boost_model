@@ -122,3 +122,10 @@ class GC_3D_v1(torch.nn.Module):
         # region term
         bce = torch.nn.BCELoss()
         region_term = bce(input=input, target=target)
+
+        # boundary term
+        '''
+        example [[[[[1, 2, 3], [4, 5, 6], [7, 8, 9]], [[10, 11, 12], [13, 14, 15], [16, 17, 18]],[[19, 20, 21], [22, 23, 24], [25, 26, 27]]]]]
+        element 14 has 26 neighborhoods, a total of 13 operations
+        '''
+        # x5 <-> x14, x14 <-> x23
