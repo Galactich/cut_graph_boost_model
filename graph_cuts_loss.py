@@ -116,3 +116,5 @@ class GC_3D_v1(torch.nn.Module):
         self.lmda = lmda
 
     def forward(self, input, target):
+        # input: B * C * H * W * D, after sigmoid operation
+        # target: B * C * H * W * D
