@@ -156,3 +156,7 @@ class GC_3D_v1(torch.nn.Module):
         input_9 = torch.abs(input[..., 1:, :, 1:] - input[..., :-1, :, :-1])
         target_9 = torch.abs(target[..., 1:, :, 1:] - target[..., :-1, :, :-1])
         # x9 <-> x14, x14 <-> x19
+        input_10 = torch.abs(input[..., 1:, :-1, :-1] - input[..., :-1, 1:, 1:])
+        target_10 = torch.abs(target[..., 1:, :-1, :-1] - target[..., :-1, 1:, 1:])
+        # x3 <-> x14, x14 <-> x25
+        input_11 = torch.abs(input[..., 1:, 1:, :-1] - input[..., :-1, :-1, 1:])
