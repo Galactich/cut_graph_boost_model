@@ -163,3 +163,10 @@ class GC_3D_v1(torch.nn.Module):
         target_11 = torch.abs(target[..., 1:, 1:, :-1] - target[..., :-1, :-1, 1:])
         # x1 <-> x14, x14 <-> x27
         input_12 = torch.abs(input[..., :-1, :-1, :-1] - input[..., 1:, 1:, 1:])
+        target_12 = torch.abs(target[..., :-1, :-1, :-1] - target[..., 1:, 1:, 1:])
+        # x7 <-> x14, x14 <-> x21
+        input_13 = torch.abs(input[..., :-1, 1:, :-1] - input[..., 1:, :-1, 1:])
+        target_13 = torch.abs(target[..., :-1, 1:, :-1] - target[..., 1:, :-1, 1:])
+
+        p1 = input_1 * target_1
+        p2 = input_2 * target_2
