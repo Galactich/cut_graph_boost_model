@@ -170,3 +170,8 @@ class GC_3D_v1(torch.nn.Module):
 
         p1 = input_1 * target_1
         p2 = input_2 * target_2
+        p3 = input_3 * target_3
+        p4 = input_4 * target_4
+        p5 = input_5 * target_5
+        p6 = input_6 * target_6
+        p7 = input_7 * target_7
