@@ -180,3 +180,8 @@ class GC_3D_v1(torch.nn.Module):
         p10 = input_10 * target_10
         p11 = input_11 * target_11
         p12 = input_12 * target_12
+        p13 = input_13 * target_13
+
+        smooth = 1e-5  # avoid zero division when target is zero
+        boundary_term = 1 - (torch.sum(p1) / (torch.sum(target_1) + smooth) +
+                             torch.sum(p2) / (torch.sum(target_2) + smooth) +
