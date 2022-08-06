@@ -205,3 +205,5 @@ class GC_3D_v2(torch.nn.Module):
     def __init__(self, lmda):
         super(GC_3D_v2, self).__init__()
         self.lmda = lmda
+
+    def forward(self, input, target):
