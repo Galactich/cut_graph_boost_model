@@ -195,3 +195,13 @@ class GC_3D_v1(torch.nn.Module):
                              torch.sum(p10) / (torch.sum(target_10) + smooth) +
                              torch.sum(p11) / (torch.sum(target_11) + smooth) +
                              torch.sum(p12) / (torch.sum(target_12) + smooth) +
+                             torch.sum(p13) / (torch.sum(target_13) + smooth)) / 13  # equation (5), and normalized to (0,1)
+
+        return self.lmda * region_term + boundary_term
+
+
+# this 3D version further eliminates the abs operation
+class GC_3D_v2(torch.nn.Module):
+    def __init__(self, lmda):
+        super(GC_3D_v2, self).__init__()
+        self.lmda = lmda
