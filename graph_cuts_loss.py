@@ -208,3 +208,7 @@ class GC_3D_v2(torch.nn.Module):
 
     def forward(self, input, target):
         # input: B * C * H * W * D, after sigmoid operation
+        # target: B * C * H * W * D
+
+        # region term
+        bce = torch.nn.BCELoss()
