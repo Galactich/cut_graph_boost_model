@@ -237,3 +237,8 @@ class GC_3D_v2(torch.nn.Module):
         # x10 <-> x14, x14 <-> x18
         input_6 = input[..., :, 1:, 1:] - input[..., :, :-1, :-1]
         target_6 = target[..., :, 1:, 1:] - target[..., :, :-1, :-1]
+        # x12 <-> x14, x14 <-> x16
+        input_7 = input[..., :, 1:, :-1] - input[..., :, :-1, 1:]
+        target_7 = target[..., :, 1:, :-1] - target[..., :, :-1, 1:]
+        # x6 <-> x14, x14 <-> x22
+        input_8 = input[..., 1:, :, :-1] - input[..., :-1, :, 1:]
