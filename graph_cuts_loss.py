@@ -220,3 +220,8 @@ class GC_3D_v2(torch.nn.Module):
         element 14 has 26 neighborhoods, a total of 13 operations
         '''
         # x5 <-> x14, x14 <-> x23
+        input_1 = input[..., 1:, :, :] - input[..., :-1, :, :]
+        target_1 = target[..., 1:, :, :] - target[..., :-1, :, :]
+        # x11 <-> x14, x14 <-> x17
+        input_2 = input[..., :, 1:, :] - input[..., :, :-1, :]
+        target_2 = target[..., :, 1:, :] - target[..., :, :-1, :]
