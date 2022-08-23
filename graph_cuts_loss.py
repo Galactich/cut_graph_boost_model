@@ -268,3 +268,11 @@ class GC_3D_v2(torch.nn.Module):
         p7 = input_7 * target_7
         p8 = input_8 * target_8
         p9 = input_9 * target_9
+        p10 = input_10 * target_10
+        p11 = input_11 * target_11
+        p12 = input_12 * target_12
+        p13 = input_13 * target_13
+
+        smooth = 1e-5  # avoid zero division when target only has one class
+        boundary_term = 1 - (torch.sum(p1) / (torch.sum(target_1 * target_1) + smooth) +
+                             torch.sum(p2) / (torch.sum(target_2 * target_2) + smooth) +
