@@ -276,3 +276,7 @@ class GC_3D_v2(torch.nn.Module):
         smooth = 1e-5  # avoid zero division when target only has one class
         boundary_term = 1 - (torch.sum(p1) / (torch.sum(target_1 * target_1) + smooth) +
                              torch.sum(p2) / (torch.sum(target_2 * target_2) + smooth) +
+                             torch.sum(p3) / (torch.sum(target_3 * target_3) + smooth) +
+                             torch.sum(p4) / (torch.sum(target_4 * target_4) + smooth) +
+                             torch.sum(p5) / (torch.sum(target_5 * target_5) + smooth) +
+                             torch.sum(p6) / (torch.sum(target_6 * target_6) + smooth) +
