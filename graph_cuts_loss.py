@@ -280,3 +280,8 @@ class GC_3D_v2(torch.nn.Module):
                              torch.sum(p4) / (torch.sum(target_4 * target_4) + smooth) +
                              torch.sum(p5) / (torch.sum(target_5 * target_5) + smooth) +
                              torch.sum(p6) / (torch.sum(target_6 * target_6) + smooth) +
+                             torch.sum(p7) / (torch.sum(target_7 * target_7) + smooth) +
+                             torch.sum(p8) / (torch.sum(target_8 * target_8) + smooth) +
+                             torch.sum(p9) / (torch.sum(target_9 * target_9) + smooth) +
+                             torch.sum(p10) / (torch.sum(target_10 * target_10) + smooth) +
+                             torch.sum(p11) / (torch.sum(target_11 * target_11) + smooth) +
