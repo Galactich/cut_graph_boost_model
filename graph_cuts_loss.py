@@ -285,3 +285,7 @@ class GC_3D_v2(torch.nn.Module):
                              torch.sum(p9) / (torch.sum(target_9 * target_9) + smooth) +
                              torch.sum(p10) / (torch.sum(target_10 * target_10) + smooth) +
                              torch.sum(p11) / (torch.sum(target_11 * target_11) + smooth) +
+                             torch.sum(p12) / (torch.sum(target_12 * target_12) + smooth) +
+                             torch.sum(p13) / (torch.sum(target_13 * target_13) + smooth)) / 13
+
+        return self.lmda * region_term + boundary_term
