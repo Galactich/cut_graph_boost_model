@@ -1,1 +1,1 @@
-# Cut Graph Boost Mo
+# Cut Graph Boost Model
