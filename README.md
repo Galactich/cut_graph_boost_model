@@ -1,3 +1,3 @@
 # Cut Graph Boost Model
 
-This repository includes
+This repository includes the
