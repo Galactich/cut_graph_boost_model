@@ -6,4 +6,6 @@ This repository includes the Pytorch implementation of the paper '[Graph Cuts Lo
   <img src="./graph_cuts_loss.png">
 </p>
 
-## Acknowledgement
+## Acknowledgements
+
+The im
