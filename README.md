@@ -8,4 +8,4 @@ This repository includes the Pytorch implementation of the paper '[Graph Cuts Lo
 
 ## Acknowledgements
 
-The implementations o
+The implementations of the los
