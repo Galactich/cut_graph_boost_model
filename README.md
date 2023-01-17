@@ -8,4 +8,4 @@ This repository includes the Pytorch implementation of the paper '[Graph Cuts Lo
 
 ## Acknowledgements
 
-The implementations of the loss functions mentioned in our work are publicly avail
+The implementations of the loss functions mentioned in our work are publicly available
