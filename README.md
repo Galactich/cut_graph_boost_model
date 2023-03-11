@@ -12,4 +12,4 @@ The implementations of the loss functions mentioned in our work are publicly ava
 
 - clDice - a Novel Topology-Preserving Loss Function for Tubular Structure Segmentation [(clDice)](https://github.com/jocpae/clDice) 
 
-- An Elastic Interaction-Based Loss Function fo
+- An Elastic Interaction-Based Loss Function for Me
