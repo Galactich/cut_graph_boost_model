@@ -14,4 +14,4 @@ The implementations of the loss functions mentioned in our work are publicly ava
 
 - An Elastic Interaction-Based Loss Function for Medical Image Segmentation [(EIB)](https://github.com/charrywhite/elastic_interaction_based_loss) 
 
--
+- Learnin
