@@ -16,4 +16,4 @@ The implementations of the loss functions mentioned in our work are publicly ava
 
 - Learning Active Contour Models for Medical Image Segmentation [(AC)](https://github.com/xuuuuuuchen/Active-Contour-Loss)
 
-- Learning Euler's Elastica Model for Medical Image Segmentation [(ACE)](ht
+- Learning Euler's Elastica Model for Medical Image Segmentation [(ACE)](https:/
