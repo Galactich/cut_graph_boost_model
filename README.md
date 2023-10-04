@@ -18,4 +18,4 @@ The implementations of the loss functions mentioned in our work are publicly ava
 
 - Learning Euler's Elastica Model for Medical Image Segmentation [(ACE)](https://github.com/HiLab-git/ACELoss) 
 
-- Reduc
+- Reducing the 
