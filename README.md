@@ -20,4 +20,4 @@ The implementations of the loss functions mentioned in our work are publicly ava
 
 - Reducing the Hausdorff Distance in Medical Image Segmentation with Convolutional Neural Networks [(HD)](https://github.com/JunMa11/SegWithDistMap/blob/5a67153bc730eb82de396ef63f57594f558e23cd/code/train_LA_HD.py#L106) 
 
-- Boundary loss for hig
+- Boundary loss for highly u
