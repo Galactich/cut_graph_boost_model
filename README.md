@@ -22,4 +22,5 @@ The implementations of the loss functions mentioned in our work are publicly ava
 
 - Boundary loss for highly unbalanced segmentation [(BD)](https://github.com/LIVIAETS/boundary-loss)
 
-## No
+## Note
+
